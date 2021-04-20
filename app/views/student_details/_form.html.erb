@@ -1,0 +1,25 @@
+<%= form_for @student_detail do |f| %>
+
+  <%= f.label :student_name %>
+  <%= f.text_field :student_name %>
+  <br/>
+
+  <%= f.label :roll_no %>
+  <%= f.number_field :roll_no %>
+  <br/>
+
+  <%= f.label :gender %>
+  <%= f.select :gender, %w{Male Female}, :prompt => 'Select', required: true, placeholder: 'Gender' %>
+  <br/>
+
+  <%= f.label :address %>
+  <%= f.text_area :address %>
+  <br/>
+
+  <%= f.label :university_name %>
+  <%= f.text_field :university_name %>
+  <br/>
+
+  <%= f.submit %>
+
+<% end %>
